@@ -1,0 +1,31 @@
+Name     Lab1Part1_4;
+PartNo   00;
+Date     1/16/2026;
+Revision 01;
+Designer Engineer;
+Company  ITLP;
+Assembly None;
+Location ;
+Device   g16v8a;
+
+
+ORDER: A12, A13, A14, A15, CSPERIPH_n, PSEN_n, RD_n, READ_n; 
+
+
+VECTORS:
+0000*00*
+1000*10*
+0100*01*
+1100*11*
+0010*00*
+1010*00*
+0110*00*
+1110*00*
+0001*00*
+1001*10*
+0101*01*
+1101*11*
+0011*11*
+1011*11*
+0111*00*
+1111*11*

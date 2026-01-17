@@ -1,0 +1,133 @@
+{COMPONENT C:\WINCUPL\WINCUPL\LAB1PART1_4.SYM
+
+ {ENVIRONMENT
+  {PDIFvrev 3.00}
+  {Program "CUPL(WM) Version 5.0a"}
+  {DBtype "Schematic"}
+  {DBvrev 1.01}
+  {DBtime "Fri Jan 16 18:50:03 2026 "}
+  {DBunit "MIL"}
+  {DBgrid 10}
+  {Lyrstr "WIRES" 1 "BUS" 1 "GATE" 2 "IEEE" 2 "PINFUN" 3 "PINNUM" 1 
+          "PINNAM" 6 "PINCON" 4 "REFDES" 2 "ATTR" 6 "SDOT" 1 
+          "DEVICE" 5 "OUTLIN" 5 "ATTR2" 6 "NOTES" 6 "NETNAM" 4 
+          "CMPNAM" 5 "BORDER" 5}
+ }
+
+ {USER
+  {VIEW
+   {Mode SYMB}
+   {Nlst OPEN}
+   {Vw 0 0 2}
+   {Lv 12 2 2 2 0 0 2 2 2 2 0 0 2 1 2 0 0 0 0}
+   {Gs 10 10}
+  }
+ }
+
+ {DISPLAY
+  [Ly "PINNUM"]
+  [Ls "SOLID"][Wd 0]
+  [Ts 15][Tj "LC"][Tr 0][Tm "N"]
+ }
+
+ {SYMBOL
+  {PIN_DEF
+   [Ly "PINCON"]
+   {P RD_N {Pt "INPUT"}{Lq 0}{Ploc 100 120}}
+   {P PSEN_N {Pt "INPUT"}{Lq 0}{Ploc 100 100}}
+   {P A12 {Pt "INPUT"}{Lq 0}{Ploc 100 80}}
+   {P A13 {Pt "INPUT"}{Lq 0}{Ploc 100 60}}
+   {P A14 {Pt "INPUT"}{Lq 0}{Ploc 100 40}}
+   {P A15 {Pt "INPUT"}{Lq 0}{Ploc 100 20}}
+   {P READ_N {Pt "I/O"}{Lq 0}{Ploc 340 20}}
+   {P CSPERIPH {Pt "I/O"}{Lq 0}{Ploc 340 40}}
+  }
+
+  {PKG
+   [Ly "REFDES"]
+   [Ts 25][Tj "CB"][Tr 0][Tm "N"]
+   {Rdl 220 150}
+
+   [Ly "PINNUM"]
+   [Ts 15][Tj "RC"]
+   {Pnl 120 130}
+   {Pnl 120 110}
+   {Pnl 120 90}
+   {Pnl 120 70}
+   {Pnl 120 50}
+   {Pnl 120 30}
+   [Ts 15][Tj "LC"]
+   {Pnl 320 30}
+   {Pnl 320 50}
+
+   {Sd A 1 2 5 6 7 8 18 19}
+  }
+
+  {PIC
+   [Ly "GATE"]
+   [Ts 15][Tj "LC"][Tr 0][Tm "N"]
+   {R 130 140 310 0}
+   {L 130 120 100 120}
+   {L 130 100 100 100}
+   {L 130 80 100 80}
+   {L 130 60 100 60}
+   {L 130 40 100 40}
+   {L 130 20 100 20}
+   {L 310 20 340 20}
+   {L 310 40 340 40}
+   [Ly "PINNAM"]
+   [Tj "LC"]
+   {T "RD_N" 140 120}
+   {T "PSEN_N" 140 100}
+   {T "A12" 140 80}
+   {T "A13" 140 60}
+   {T "A14" 140 40}
+   {T "A15" 140 20}
+   [Tj "RC"]
+   {T "READ_N" 300 20}
+   {T "CSPERIPH" 300 40}
+   [Ly "DEVICE"]
+   [Tj "CT"]
+   {T "G16V8AS" 220 -10}
+  }
+
+  {ATR
+   {IN
+    {Org 100 20}
+    {Ty 255}
+   }
+   {EX
+    [Ly "ATTR2"]
+    [Ts 12][Tj "CT"][Tr 0][Tm "N"]
+    {At PLD C:\WINCUPL\WINCUPL\LAB1PART1_4 220 140}
+   }
+  }
+ }
+
+ {DETAIL
+  {ANNOTATE
+  }
+
+  {NET_DEF
+   {N RD_N
+   }
+   {N PSEN_N
+   }
+   {N A12
+   }
+   {N A13
+   }
+   {N A14
+   }
+   {N A15
+   }
+   {N READ_N
+   }
+   {N CSPERIPH
+   }
+  }
+
+  {SUBCOMP
+  }
+ }
+}

@@ -1,0 +1,26 @@
+Name     Lab1Part1_4 ;
+PartNo   00 ;
+Date     1/16/2026 ;
+Revision 01 ;
+Designer Engineer ;
+Company  ITLP ;
+Assembly None ;
+Location  ;
+Device   g16v8a;
+
+/* *************** INPUT PINS *********************/
+PIN 8  = A15                        ; /*                                 */ 
+PIN 7  = A14                        ; /*                                 */ 
+PIN 6  = A13                        ; /*                                 */ 
+PIN 5  = A12                        ; /*                                 */ 
+PIN 1  = RD_n                       ; /*                                 */ 
+PIN 2  = PSEN_n                     ; /*                                 */ 
+
+/* *************** OUTPUT PINS ********************/
+PIN 18  = READ_n;                     /*                                 */ 
+PIN 19  = CSPERIPH_n;                 /*                                 */ 
+
+/* ***************** LOGIC ************************/
+
+CSPERIPH_n = !(A15 & A14 & A13 & A12);
+READ_n = RD_n & PSEN_n;

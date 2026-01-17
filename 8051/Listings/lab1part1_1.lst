@@ -1,0 +1,80 @@
+A51 MACRO ASSEMBLER  LAB1PART1_1                                                          01/16/2026 19:49:06 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.7.0
+OBJECT MODULE PLACED IN .\Objects\lab1part1_1.obj
+ASSEMBLER INVOKED BY: C:\Keil_v5\C51\BIN\A51.EXE lab1part1_1.a51 SET(SMALL) DEBUG PRINT(.\Listings\lab1part1_1.lst) OBJE
+                      CT(.\Objects\lab1part1_1.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+                       1     ; Authors :Trevor Sribar
+                       2     ; Course Name :- ECEN 5613 
+                       3     ; Date :- 1/16/26
+0000                   4                     ORG 0000H          ; Reset vector       
+0000                   5     START:
+0000 F520              6                     MOV 0x20, A                     ;Copies the Accumulator(X) to 0x20
+0002 23                7                     RL A                    ;Rotates Accumulator Left (multiplies by 2)
+0003 23                8                     RL A                            ;Rotates the Accumulator Left (multiplies b
+                             y 2)
+0004 F521              9                     MOV 0x21, A                     ;Copies the Accumulator(4*X) to 0x21
+0006 5403             10                     ANL A, #0x03                    ;Ands the Accumulator (shifted X with 00..0
+                             011), should be 0 if non-error
+0008 6006             11                     JZ NO_X_ERROR           ;If the accumulator is zero, we skip error handling
+                      12     ;Error cuz X was too big
+000A 753002           13                     MOV 0x30, #0x02         ;Set the error location to 0x02
+000D 020031           14                     LJMP INFINITE_LOOP      ;Jumps to infinte loop
+                      15                     
+0010                  16     NO_X_ERROR:
+0010 E5F0             17                     MOV A, B                        ;Moves the B register to the A register
+0012 7006             18                     JNZ NO_Y_ERROR          ;If Y is not 0, we skip error handling
+                      19     ;Error cuz Y is 0
+0014 753001           20                     MOV 0x30, #0x01         ;Set the error location to 0x02
+0017 020031           21                     LJMP INFINITE_LOOP      ;Jumps to infinte loop
+                      22                     
+001A                  23     NO_Y_ERROR:
+001A F522             24                     MOV 0x22, A                     ;Copies the Accumulator(Y) to 0x22
+001C 752300           25                     MOV 0x23, #0x00         ;Sets the quotient location (0x23) to 0, initializi
+                             ng for loop
+001F E521             26                     MOV A, 0x21                     ;Sets the accumulator to 4*X, initializing 
+                             for loop
+                      27                     
+0021                  28     LOOP: ;In this loop, we set a "W" which is 4X-(*0x23)*Y
+0021 95F0             29                     SUBB A, B                       ;A now holds W-Y
+0023 4005             30                     JC SAVING_REMAINDER     ;If we have had overflow from subtraction (carry ha
+                             s been set), we are done with division
+0025 0523             31                     INC 0x23                        ;If we didn't overflow, increment the Quoti
+                             ent
+0027 020021           32             LJMP LOOP                       ;Go to next round
+                      33      
+002A                  34     SAVING_REMAINDER:
+002A 25F0             35                     ADD A, B                        ;We had A go to a negitive number, so we ne
+                             ed to add Y back in order to get it to the actual remainder
+002C F524             36                     MOV 0x24, A                     ;Sets 0x24 to the remainder
+002E 850030           37                     MOV 0x30, 0x00          ;Says we did not get an error during our operation
+                      38     
+0031                  39     INFINITE_LOOP:
+0031 80FE             40             SJMP INFINITE_LOOP          ; Infinite loop after completion
+                      41      
+                      42             END
+A51 MACRO ASSEMBLER  LAB1PART1_1                                                          01/16/2026 19:49:06 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+B. . . . . . . . .  D ADDR   00F0H   A   
+INFINITE_LOOP. . .  C ADDR   0031H   A   
+LOOP . . . . . . .  C ADDR   0021H   A   
+NO_X_ERROR . . . .  C ADDR   0010H   A   
+NO_Y_ERROR . . . .  C ADDR   001AH   A   
+SAVING_REMAINDER .  C ADDR   002AH   A   
+START. . . . . . .  C ADDR   0000H   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)
