@@ -13,8 +13,8 @@ PIN 8  = A15                        ; /*                                 */
 PIN 7  = A14                        ; /*                                 */ 
 PIN 6  = A13                        ; /*                                 */ 
 PIN 5  = A12                        ; /*                                 */ 
-PIN 1  = RD_n                       ; /*                                 */ 
-PIN 2  = PSEN_n                     ; /*                                 */ 
+PIN 2  = RD_n                       ; /*             +1                  */ 
+PIN 3  = PSEN_n                     ; /*             +1                  */ 
 
 /* *************** OUTPUT PINS ********************/
 PIN 18  = READ_n;                     /*                                 */ 

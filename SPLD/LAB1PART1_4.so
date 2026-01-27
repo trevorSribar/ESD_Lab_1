@@ -1,7 +1,7 @@
 CSIM(WM): CUPL Simulation Program
 Version 5.0a Serial# 
 Copyright (c) 1983, 1998 Logical Devices, Inc.
-CREATED Fri Jan 16 19:10:47 2026
+CREATED Fri Jan 23 11:48:26 2026
 
 LISTING FOR SIMULATION FILE: LAB1PART1_4.si
 
@@ -32,7 +32,7 @@ LISTING FOR SIMULATION FILE: LAB1PART1_4.si
       1111____   
       2345nnnn   
 =================
-0001: 0000H00L
+0001: XX11X00L
 0002: 1000H10L
 0003: 0100H01L
 0004: 1100H11H
