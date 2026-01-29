@@ -1,11 +1,11 @@
 %SIGNAL
-PIN   5 =  A12 
+PIN   7 =  A12 
 PIN   6 =  A13 
-PIN   7 =  A14 
-PIN   8 =  A15 
+PIN   5 =  A14 
+PIN   4 =  A15 
 PIN  19 =  CSPERIPH_n 
 PIN   2 =  PSEN_n 
-PIN   1 =  RD_n 
+PIN   9 =  RD_n 
 PIN  18 =  READ_n 
 %END
 

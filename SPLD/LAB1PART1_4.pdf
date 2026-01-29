@@ -1,11 +1,11 @@
-{COMPONENT C:\WINCUPL\WINCUPL\LAB1PART1_4.SYM
+{COMPONENT C:\USERS\TRSR6750\DOCUMENTS\SRIBAR_LAB_1_SIGNOFF_SW\SPLD\LAB1PART1_4.SYM
 
  {ENVIRONMENT
   {PDIFvrev 3.00}
   {Program "CUPL(WM) Version 5.0a"}
   {DBtype "Schematic"}
   {DBvrev 1.01}
-  {DBtime "Fri Jan 16 18:50:03 2026 "}
+  {DBtime "Wed Jan 28 22:48:07 2026 "}
   {DBunit "MIL"}
   {DBgrid 10}
   {Lyrstr "WIRES" 1 "BUS" 1 "GATE" 2 "IEEE" 2 "PINFUN" 3 "PINNUM" 1 
@@ -33,12 +33,12 @@
  {SYMBOL
   {PIN_DEF
    [Ly "PINCON"]
-   {P RD_N {Pt "INPUT"}{Lq 0}{Ploc 100 120}}
-   {P PSEN_N {Pt "INPUT"}{Lq 0}{Ploc 100 100}}
-   {P A12 {Pt "INPUT"}{Lq 0}{Ploc 100 80}}
+   {P PSEN_N {Pt "INPUT"}{Lq 0}{Ploc 100 120}}
+   {P A15 {Pt "INPUT"}{Lq 0}{Ploc 100 100}}
+   {P A14 {Pt "INPUT"}{Lq 0}{Ploc 100 80}}
    {P A13 {Pt "INPUT"}{Lq 0}{Ploc 100 60}}
-   {P A14 {Pt "INPUT"}{Lq 0}{Ploc 100 40}}
-   {P A15 {Pt "INPUT"}{Lq 0}{Ploc 100 20}}
+   {P A12 {Pt "INPUT"}{Lq 0}{Ploc 100 40}}
+   {P RD_N {Pt "INPUT"}{Lq 0}{Ploc 100 20}}
    {P READ_N {Pt "I/O"}{Lq 0}{Ploc 340 20}}
    {P CSPERIPH {Pt "I/O"}{Lq 0}{Ploc 340 40}}
   }
@@ -60,7 +60,7 @@
    {Pnl 320 30}
    {Pnl 320 50}
 
-   {Sd A 1 2 5 6 7 8 18 19}
+   {Sd A 2 4 5 6 7 9 18 19}
   }
 
   {PIC
@@ -77,12 +77,12 @@
    {L 310 40 340 40}
    [Ly "PINNAM"]
    [Tj "LC"]
-   {T "RD_N" 140 120}
-   {T "PSEN_N" 140 100}
-   {T "A12" 140 80}
+   {T "PSEN_N" 140 120}
+   {T "A15" 140 100}
+   {T "A14" 140 80}
    {T "A13" 140 60}
-   {T "A14" 140 40}
-   {T "A15" 140 20}
+   {T "A12" 140 40}
+   {T "RD_N" 140 20}
    [Tj "RC"]
    {T "READ_N" 300 20}
    {T "CSPERIPH" 300 40}
@@ -99,7 +99,7 @@
    {EX
     [Ly "ATTR2"]
     [Ts 12][Tj "CT"][Tr 0][Tm "N"]
-    {At PLD C:\WINCUPL\WINCUPL\LAB1PART1_4 220 140}
+    {At PLD C:\USERS\TRSR6750\DOCUMENTS\SRIBAR_LAB_1_SIGNOFF_SW\SPLD\LAB1PART1_4 220 140}
    }
   }
  }
@@ -109,17 +109,17 @@
   }
 
   {NET_DEF
-   {N RD_N
-   }
    {N PSEN_N
    }
-   {N A12
-   }
-   {N A13
+   {N A15
    }
    {N A14
    }
-   {N A15
+   {N A13
+   }
+   {N A12
+   }
+   {N RD_N
    }
    {N READ_N
    }
