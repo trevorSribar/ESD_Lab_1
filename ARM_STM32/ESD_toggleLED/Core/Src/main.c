@@ -7,6 +7,7 @@
   * @attention
   *
   * Copyright (c) 2026 STMicroelectronics.
+  * Modified by Trevor Sribar (USER)
   * All rights reserved.
   *
   * This software is licensed under terms that can be found in the LICENSE file

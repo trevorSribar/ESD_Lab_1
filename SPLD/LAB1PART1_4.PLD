@@ -1,11 +1,11 @@
-Name     Lab1Part1_4 ;
-PartNo   00 ;
-Date     1/16/2026 ;
-Revision 01 ;
-Designer Engineer ;
-Company  ITLP ;
-Assembly None ;
-Location  ;
+Name     Lab1Part1_4;
+PartNo   00;
+Date     1/28/2026;
+Revision 0w;
+Designer Trevor Sribar;
+Company  ITLP;
+Assembly None;
+Location ;
 Device   g16v8a;
 
 /* *************** INPUT PINS *********************/
